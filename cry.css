@@ -5,13 +5,14 @@ body {
     background: lightgray;
     font-size: 25px;
     font-weight: normal;
-    text-align: center;
     color: #222;
 }
 
 img {
     border-radius: 15px;
     box-shadow: 12px 12px 5px #46346b;
+    margin-right: 30px;
+    display: inline-block;
 }
 
 table {
@@ -28,19 +29,28 @@ tr:nth-child(1) {
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 5px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .info {
-    background-color: #f1f1f1;
+    background: transparent;
+}
+
+.info h1,
+.infotext {
+    display: inline-block;
 }
 
 .hobby {
     background-color: #50ff50;
-    max-width: 830px;
+    max-width: 1030px;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+}
+
+.hobby h3 {
+    margin-left: 20px;
 }
 
 .work {
@@ -49,7 +59,8 @@ tr:nth-child(1) {
 }
 
 .contacts {
-    background-color: #ee4040;
+    background-color: #dadada;
+    display: block;
 }
 
 .socials {
@@ -82,17 +93,10 @@ a:visited {
     color: silver;
 }
 
-textarea {
-    max-width: 500px;
-    max-height: 250px;
-    width: 500px;
-    height: 250px;
-}
-
 .btn1 {
     padding: 20px 20px;
     font-family: inherit;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #222;
     color: white;
     border-radius: 28px;
@@ -112,21 +116,25 @@ textarea {
 
 .labcards {
     width: 100%;
-    height: 20px;
-    margin-bottom: 15px;
+    display: block;
+    width: 50%;
+    margin-right: 10px;
 }
 
 .labcards label {
-    float: left;
-    margin-left: 30%;
+    color: #888;
+    margin-bottom: 15px;
 }
 
-.labcards input {
-    width: 250px;
-    height: 20px;
-    border-radius: 28px;
-    float: right;
-    margin-right: 20%;
+.labcards input,
+textarea {
+    width: 100%;
+    height: auto;
+    background-color: #dadada;
+    border-width: 0px;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 16px;
 }
 
 ul {
@@ -142,8 +150,32 @@ ul li {
     width: 20%;
     margin: 0px;
     padding: 0px;
+    text-align: center;
 }
 
 ul li:hover {
     background-color: aqua;
+}
+
+.formcl {
+    display: flex;
+}
+
+@media (max-width:650px) {
+    .container {
+        display: block;
+        font-size: 12px;
+    }
+
+    ul li {
+        font-size: 12px;
+    }
+
+    .btn1 {
+        font-size: 12px;
+    }
+
+    img {
+        transform: scale(0.5);
+    }
 }
